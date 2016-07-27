@@ -1,0 +1,216 @@
+
+@import '../bower_components/sass-flex-mixin/_flex';	
+* {
+	margin:0px;
+	padding:0px;
+}
+
+h2{
+	color:white;
+	font-size:15px;
+	padding:3px;
+	font-weight:bold;
+}
+
+ 
+body {
+	background:#FFFFFA;
+}
+.menu-left {
+	display:none;
+}
+
+
+.menu-right {
+	display:none;
+}
+
+ 
+header {
+	width:100%;
+		.nav-left {
+		width:50%;
+
+		margin:0;
+		background:#024959;
+			ul {
+			overflow:hidden;
+			list-style:none;
+		}
+	}
+
+}
+ 
+
+
+li {
+	float:left;
+	 a {
+		color:#fff;
+		padding:20px;
+		display:block;
+		text-decoration:none;
+		 span {
+			margin-right:10px;
+		}
+
+	a:hover {
+	background:#037E8C;
+}	 
+	}
+	 
+}
+
+section {
+	padding-top:50px;
+
+	p{
+
+	padding:20px;
+		
+	}
+}
+
+
+
+ 
+@media screen and (max-width:800px ) {
+
+	 header{
+	 	width: 100%;
+	 	height: 50px;
+	 	background-color: #037E8C;
+	 	@include flexbox;
+		@include justify-content(space-between);
+		@include align-items(flex-start);
+		position:fixed;
+	 	
+	 	.menu1{
+	 	
+			display:inline-block;
+			margin:0px;
+			padding:0px;
+
+	 	}
+
+	 	.logo{
+	 		
+			display: inline-block;
+			text-align: center;  
+			margin:0px;
+			padding:0px;
+
+	 	}
+
+	 	.menu2{
+	 		
+			display: inline-block;
+			margin:0px;
+			padding:0px;
+			background-color: green;
+
+	 	}
+
+
+
+	 	
+	 }
+
+
+
+	.menu-left {
+		display:block;
+		background:#ccc;
+		width:50px;
+		height:50px;
+
+			.bt-menu {
+			width:50px;
+			height:50px;
+			padding: 11px;
+			display:block;
+			background:#024959;
+			color:#fff;
+			text-decoration:none;
+			font-weight: bold;
+			font-size:25px;
+			-webkit-box-sizing:border-box;
+			-moz-box-sizing:border-box;
+			box-sizing:border-box;
+
+				.menu-left span {
+					float:right;
+					font-size:40px;
+				}
+		}
+	}
+
+	.nav-left {
+		width:50%;
+		height:100%;
+		left:-100%;
+		margin:0;
+		position: fixed;
+
+			li {
+			display:block;
+			float:none;
+			border-bottom:1px solid rgba(255,255,255, .3);
+		}
+
+	}
+
+	.menu-right{
+		display:block;
+		background:#ccc;
+		width:50px;
+		height:50px;
+
+
+
+			.bt-menu2{
+			width:50px;
+			height:50px;
+			padding: 11px;
+			display:block;
+			background:#024959;
+			color:#fff;
+			text-decoration:none;
+			font-weight: bold;
+			font-size:25px;
+			-webkit-box-sizing:border-box;
+			-moz-box-sizing:border-box;
+			box-sizing:border-box;
+
+				.menu-right span {
+					float:right;
+					font-size:40px;
+				}
+		}
+	}
+
+
+	.nav-right{
+		width:50%;
+		height:100%;
+		// left:-100%;
+		right:-100%;
+		margin:0;
+		background-color:red;
+		position: fixed;
+
+			li {
+			text-align: right;
+			display:block;
+			float:none;
+			border-bottom:1px solid rgba(255,255,255, .3);
+		}
+
+	}
+
+
+
+
+
+ 
+}
